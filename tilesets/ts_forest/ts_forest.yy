@@ -1,7 +1,10 @@
 {
   "$GMTileSet":"v1",
   "%Name":"ts_forest",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"grass_and_water","closed_edge":false,"name":"grass_and_water","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[43,50,48,49,8,29,0,9,6,0,27,10,7,30,31,0,],},
+    {"$GMAutoTileSet":"","%Name":"grass_and_dir","closed_edge":false,"name":"grass_and_dir","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[43,134,132,133,92,113,0,114,90,0,111,115,91,135,136,106,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":7,
     "SerialiseWidth":7,

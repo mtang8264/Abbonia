@@ -5,24 +5,29 @@
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
-  "instanceCreationOrder":[],
+  "instanceCreationOrder":[
+    {"name":"inst_3DF7609D","path":"rooms/Room1/Room1.yy",},
+  ],
   "isDnd":false,
   "layers":[
-    {"$GMRTileLayer":"","%Name":"Tiles_1","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":24,"SerialiseWidth":43,"TileCompressedData":[
-          -57,-2147483648,1,3,-4,30,1,8,-35,-2147483648,3,3,30,63,-4,29,4,60,30,30,8,-32,-2147483648,1,15,-9,29,
-          2,60,8,-30,-2147483648,2,3,63,-10,29,1,16,-29,-2147483648,2,3,63,-11,29,1,16,-28,-2147483648,2,3,63,
-          -12,29,1,16,-28,-2147483648,1,15,-13,29,1,16,-28,-2147483648,2,73,21,-12,29,1,16,-29,-2147483648,1,15,
-          -11,29,2,18,78,-29,-2147483648,1,15,-6,29,6,18,21,29,18,44,78,-30,-2147483648,2,73,21,-5,29,5,60,63,
-          29,60,8,-32,-2147483648,4,73,44,44,21,-6,29,1,16,-35,-2147483648,1,15,-5,29,2,18,78,-35,-2147483648,
-          1,15,-5,29,1,16,-36,-2147483648,7,73,44,44,21,29,29,16,-39,-2147483648,4,73,44,44,78,-323,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_forest_objects","path":"tilesets/ts_forest_objects/ts_forest_objects.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_3DF7609D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3DF7609D","objectId":{"name":"obj_player_overworld","path":"objects/obj_player_overworld/obj_player_overworld.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":160.0,},
+      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRTileLayer":"","%Name":"grass","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"grass","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":36,"SerialiseWidth":64,"TileCompressedData":[
+          1,-2147483648,-6,0,-58,-2147483648,-4,0,1,9,-12,49,1,10,-45,-2147483648,-4,0,2,9,50,-12,43,3,48,49,10,
+          -43,-2147483648,-3,0,2,9,50,-15,43,3,48,49,10,-41,-2147483648,4,0,9,49,50,-18,43,3,48,49,10,-39,-2147483648,
+          2,0,29,-22,43,2,48,10,-39,-2147483648,1,29,-23,43,2,48,10,-38,-2147483648,1,29,-24,43,1,27,-38,-2147483648,
+          1,29,-24,43,1,27,-38,-2147483648,1,29,-24,43,1,27,-38,-2147483648,1,29,-24,43,1,27,-38,-2147483648,1,
+          29,-24,43,1,27,-38,-2147483648,1,29,-24,43,1,27,-38,-2147483648,2,30,8,-22,43,2,6,31,-39,-2147483648,
+          1,29,-22,43,1,27,-40,-2147483648,2,30,8,-20,43,2,6,31,-41,-2147483648,3,30,7,8,-17,43,2,6,31,-44,-2147483648,
+          4,30,7,7,8,-12,43,3,6,7,31,-48,-2147483648,1,30,-12,7,1,31,-1130,-2147483648,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_forest","path":"tilesets/ts_forest/ts_forest.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"Room1",
   "parent":{
-    "name":"Abbonia",
-    "path":"Abbonia.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
@@ -35,14 +40,14 @@
   "resourceType":"GMRoom",
   "resourceVersion":"2.0",
   "roomSettings":{
-    "Height":768,
+    "Height":1152,
     "inheritRoomSettings":false,
     "persistent":false,
-    "Width":1366,
+    "Width":2048,
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":180,"hport":1080,"hspeed":-1,"hview":288,"inherit":false,"objectId":{"name":"obj_player_overworld","path":"objects/obj_player_overworld/obj_player_overworld.yy",},"vborder":100,"visible":true,"vspeed":-1,"wport":1920,"wview":512,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
@@ -54,7 +59,7 @@
   "viewSettings":{
     "clearDisplayBuffer":true,
     "clearViewBackground":false,
-    "enableViews":false,
+    "enableViews":true,
     "inheritViewSettings":false,
   },
   "volume":1.0,

@@ -7,6 +7,10 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_3DF7609D","path":"rooms/Room1/Room1.yy",},
+    {"name":"ui_button_left","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"ui_button_up","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"ui_button_down","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"ui_button_right","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

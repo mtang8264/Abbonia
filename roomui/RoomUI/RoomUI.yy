@@ -1,0 +1,36 @@
+{
+  "$GMRoomUI":"",
+  "%Name":"RoomUI",
+  "children":[
+    {"$GMRUILayer":"v1","%Name":"Input_Visualizer","alignItems":1,"children":[
+        {"$GMRFlexPanel":"","%Name":"FlexPanel_1","alignItems":2,"children":[
+            {"$GMRInstance":"v2","%Name":"ui_button_left","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":6,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ui_button_left","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"propertyId":{"name":"str_button_name","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"left\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":1,"value":32.0,},"justifyContent":1,"name":"FlexPanel_1","nodeColour":4294068310,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":32.0,},},
+        {"$GMRFlexPanel":"","%Name":"FlexPanel","alignItems":2,"children":[
+            {"$GMRInstance":"v2","%Name":"ui_button_up","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ui_button_up","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"propertyId":{"name":"str_button_name","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"up\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":0.0,},
+            {"$GMRInstance":"v2","%Name":"ui_button_down","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":3,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ui_button_down","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"propertyId":{"name":"str_button_name","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"down\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":1,"value":64.0,},"justifyContent":1,"name":"FlexPanel","nodeColour":4282967282,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":32.0,},},
+        {"$GMRFlexPanel":"","%Name":"FlexPanel_2","alignItems":2,"children":[
+            {"$GMRInstance":"v2","%Name":"ui_button_right","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":6,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ui_button_right","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_visualizer","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"propertyId":{"name":"str_button_name","path":"objects/obj_ui_button_visualizer/obj_ui_button_visualizer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"right\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":1,"value":32.0,},"justifyContent":1,"name":"FlexPanel_2","nodeColour":4294079304,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":32.0,},},
+      ],"flexDirection":2,"gridX":32,"gridY":32,"justifyContent":0,"name":"Input_Visualizer","nodeColour":4282943730,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+  ],
+  "locked":false,
+  "name":"RoomUI",
+  "parent":{
+    "name":"Abbonia",
+    "path":"Abbonia.yyp",
+  },
+  "resourceType":"GMRoomUI",
+  "resourceVersion":"2.0",
+  "viewspaceChildren":[],
+  "visible":true,
+}

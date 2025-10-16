@@ -1,3 +1,5 @@
+
+// Check if the button is pressed
 switch(str_button_name) {
 	case "left":
 		bool_pressed = keyboard_check(vk_left);
@@ -13,7 +15,7 @@ switch(str_button_name) {
 }
 
 if (bool_pressed) {
-	sprite_index = -1;
+	image_index = 1;
 } else {
-	sprite_index = spr_index;
+	image_index = 0;
 }

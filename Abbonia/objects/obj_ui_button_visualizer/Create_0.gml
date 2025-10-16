@@ -3,15 +3,15 @@ spr_index = sprite_index;
 
 switch (str_button_name) {
 	case "left":
-		image_index = 34;
+		sprite_index = spr_ui_buttons_left;
 		break;
 	case "down":
-		image_index = 33;
+		sprite_index = spr_ui_buttons_down;
 		break;
 	case "up":
-		image_index = 32;
+		sprite_index = spr_ui_buttons_up;
 		break;
 	case "right":
-		image_index = 35;
+		sprite_index = spr_ui_buttons_right;
 		break;
 }

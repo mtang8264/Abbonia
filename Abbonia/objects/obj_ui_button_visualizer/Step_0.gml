@@ -12,6 +12,13 @@ switch(str_button_name) {
 		break;
 	case "right":
 		bool_pressed = keyboard_check(vk_right);
+		break;
+	case "affirmative":
+		bool_pressed = keyboard_check(ord("Z"));
+		break;
+	case "negative":
+		bool_pressed = keyboard_check(ord("X"));
+		break;
 }
 
 if (bool_pressed) {

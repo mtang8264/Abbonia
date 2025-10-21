@@ -11,6 +11,8 @@
     {"name":"ui_button_up","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"ui_button_down","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"ui_button_right","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"ui_button_a","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"ui_button_b","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

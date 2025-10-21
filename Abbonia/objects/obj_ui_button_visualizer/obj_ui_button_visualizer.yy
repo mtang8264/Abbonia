@@ -37,7 +37,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_buttons_down",
+    "path":"sprites/spr_ui_buttons_down/spr_ui_buttons_down.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

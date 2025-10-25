@@ -7,6 +7,10 @@ enum INPUTS {
 	BUTTON_NO
 }
 
+
+/// @desc Returns a boolean representing if a given input is being held down or not.
+/// @param {real} input_to_check The input to check. The values are stored in the enum INPUTS.
+/// @return {bool} True if the input is held, false otherwise.
 function input_check(input_to_check){
 	switch(input_to_check){
 		case INPUTS.DIRECTION_UP:

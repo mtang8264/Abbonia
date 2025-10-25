@@ -4,6 +4,8 @@ int_button = -1;
 
 update_sprite_index();
 
+/// @desc Assigns the correct sprite to the obj_ui_button_visualizer instance.
+///       Also assigns the int_button variable so that the correct input is begin checked.
 function update_sprite_index() {
 	switch (str_button_name) {
 		case "left":

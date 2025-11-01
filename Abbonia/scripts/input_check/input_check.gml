@@ -20,63 +20,20 @@ enum INPUT_MODE {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check(input_to_check, current_input_mode = INPUT_MODE.ARROW_KEYS){
-	switch(input_to_check){
-		case INPUTS.DIRECTION_UP:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(vk_up);
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("W"));
-				default:
-					return false;
+	// A 2D array that contains all the ways to do a specific input
+	var input_map = 
+	[
+		// Order is always ARROW, WASD, CONTROLLER, CUSTOM
+		[vk_up, ord("W"), -1], // DIRECTION_UP
+		[vk_down, ord("S"), -1], // DIRECTION_DOWN
+		[vk_left, ord("A"), -1], // DIRECTION_LEFT
+		[vk_right, ord("D"), -1], // DIRECTION_RIGHT
+		[ord("Z"), ord("J"), -1], // BUTTON_YES
+		[ord("X"), ord("K"), -1] // BUTTON_NO
+	]
 			}
-		case INPUTS.DIRECTION_DOWN:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(vk_down);
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("S"));
-				default:
-					return false;
-			}
-		case INPUTS.DIRECTION_LEFT:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(vk_left);
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("A"));
-				default:
-					return false;
-			}
-		case INPUTS.DIRECTION_RIGHT:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(vk_right);
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("D"));
-				default:
-					return false;
-			}
-		case INPUTS.BUTTON_YES:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(ord("Z"));
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("J"));
-				default:
-					return false;
-			}
-		case INPUTS.BUTTON_NO:
-			switch(current_input_mode){
-				case INPUT_MODE.ARROW_KEYS:
-					return keyboard_check(ord("X"));
-				case INPUT_MODE.WASD:
-					return keyboard_check(ord("K"));
-				default:
-					return false;
-			}
-		default:
-			return false;
 	}
+	
+	// Default case where we just check the keyboard input given by the input_map
+	return keyboard_check(input_map[input_to_check][current_input_mode]);
 }

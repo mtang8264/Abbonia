@@ -10,7 +10,8 @@ enum INPUTS {
 enum INPUT_MODE {
 	ARROW_KEYS,
 	WASD,
-	CUSTOM
+	CUSTOM,
+	ANY
 }
 
 /// @desc Returns a boolean representing if a given input is being held down or not.
@@ -19,7 +20,9 @@ enum INPUT_MODE {
 ///                                    0 is ARROW_KEYS.
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
+///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
+function input_check(input_to_check, current_input_mode = INPUT_MODE.ANY){
 	// A 2D array that contains all the ways to do a specific input
 	var input_map = 
 	[
@@ -31,7 +34,16 @@ enum INPUT_MODE {
 		[ord("Z"), ord("J"), -1], // BUTTON_YES
 		[ord("X"), ord("K"), -1] // BUTTON_NO
 	]
+	
+	// special case for INPUT_MODE.ANY where we have to check all the other input mode options
+	if (current_input_mode == INPUT_MODE.ANY) {
+		var check_status = false;
+		for (var i = 0; i < array_length(input_map[input_to_check]); i++) {
+			if (keyboard_check(input_map[input_to_check][i])) {
+				check_status = true;
 			}
+		}
+		return check_status;
 	}
 	
 	// Default case where we just check the keyboard input given by the input_map

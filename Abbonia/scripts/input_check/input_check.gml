@@ -10,7 +10,6 @@ enum INPUTS {
 enum INPUT_MODE {
 	ARROW_KEYS,
 	WASD,
-	CONTROLLER,
 	CUSTOM
 }
 
@@ -19,8 +18,7 @@ enum INPUT_MODE {
 /// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
 ///                                    0 is ARROW_KEYS.
 ///                                    1 is WASD.
-///                                    2 is CONTROLLER.
-///                                    3 is CUSTOM.
+///                                    2 is CUSTOM.
 /// @return {bool} True if the input is held, false otherwise.
 function input_check(input_to_check, current_input_mode = INPUT_MODE.ARROW_KEYS){
 	switch(input_to_check){

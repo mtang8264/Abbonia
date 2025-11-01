@@ -55,3 +55,69 @@ function input_check(input_to_check, current_input_mode = INPUT_MODE.ANY){
 	// Default case where we just check the keyboard input given by the input_map
 	return keyboard_check(input_map[input_to_check][current_input_mode]);
 }
+
+/// @desc Returns a boolean representing if the up input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_up(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.DIRECTION_UP, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the down input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_down(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.DIRECTION_DOWN, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the left input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_left(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.DIRECTION_LEFT, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the right input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_right(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.DIRECTION_RIGHT, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the yes input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_yes(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.BUTTON_YES, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the no input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_no(current_input_mode = INPUT_MODE.ANY) {
+	return input_check(INPUTS.BUTTON_NO, current_input_mode);
+}

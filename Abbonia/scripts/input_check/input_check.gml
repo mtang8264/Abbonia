@@ -16,6 +16,12 @@ enum INPUT_MODE {
 
 /// @desc Returns a boolean representing if a given input is being held down or not.
 /// @param {real} input_to_check The input to check. The values are stored in the enum INPUTS.
+///                              0 is DIRECTION_UP.
+///                              1 is DIRECTION_DOWN.
+///                              2 is DIRECTION_LEFT.
+///                              3 is DIRECTION_RIGHT.
+///                              4 is BUTTON_YES.
+///                              5 is BUTTON_NO.
 /// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
 ///                                    0 is ARROW_KEYS.
 ///                                    1 is WASD.

@@ -27,8 +27,23 @@ enum INPUT_MODE {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+///                                    If no argument is passed, defaults to -1 which will check for a global default and use ANY otherwise.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check(input_to_check, current_input_mode = INPUT_MODE.ANY){
+function input_check(input_to_check, current_input_mode = -1){
+	var cim = -1;
+	// If no input mode was specified and a default exists, use the default
+	if (current_input_mode == -1 && variable_global_exists("default_input_mode")) {
+		cim = global.default_input_mode;
+	}
+	// Elif no input mode was specified and a default doesn't exist, use ANY
+	else if (current_input_mode == -1) {
+			cim = INPUT_MODE.ANY;
+	}
+	// Else use the specified input mode
+	else {
+		cim = current_input_mode;
+	}
+	
 	// A 2D array that contains all the ways to do a specific input
 	var input_map = 
 	[
@@ -53,7 +68,7 @@ function input_check(input_to_check, current_input_mode = INPUT_MODE.ANY){
 	}
 	
 	// Default case where we just check the keyboard input given by the input_map
-	return keyboard_check(input_map[input_to_check][current_input_mode]);
+	return keyboard_check(input_map[input_to_check][cim]);
 }
 
 /// @desc Returns a boolean representing if the up input is held.

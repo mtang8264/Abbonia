@@ -1,0 +1,1 @@
+global.default_input_mode = INPUT_MODE.ARROW_KEYS;

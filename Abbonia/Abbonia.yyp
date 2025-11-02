@@ -66,6 +66,8 @@
     {"id":{"name":"spr_ui_button_arrow_up","path":"sprites/spr_ui_button_arrow_up/spr_ui_button_arrow_up.yy",},},
     {"id":{"name":"spr_ui_button_face_a","path":"sprites/spr_ui_button_face_a/spr_ui_button_face_a.yy",},},
     {"id":{"name":"spr_ui_button_face_b","path":"sprites/spr_ui_button_face_b/spr_ui_button_face_b.yy",},},
+    {"id":{"name":"ui_button_bumper_left","path":"sprites/ui_button_bumper_left/ui_button_bumper_left.yy",},},
+    {"id":{"name":"ui_button_bumper_right","path":"sprites/ui_button_bumper_right/ui_button_bumper_right.yy",},},
     {"id":{"name":"ts_cliffs","path":"tilesets/ts_cliffs/ts_cliffs.yy",},},
     {"id":{"name":"ts_forest_objects","path":"tilesets/ts_forest_objects/ts_forest_objects.yy",},},
     {"id":{"name":"ts_forest_trees","path":"tilesets/ts_forest_trees/ts_forest_trees.yy",},},

@@ -32,8 +32,9 @@ enum INPUT_MODE {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 ///                                    If no argument is passed, defaults to -1 which will check for a global default and use ANY otherwise.
+/// @param {bool} [pressed] Selects whether the function should only check for presses this frame or if held keys should be included. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check(input_to_check, current_input_mode = -1){
+function input_check(input_to_check, current_input_mode = -1, pressed = false){
 	var cim = -1;
 	// If no input mode was specified and a default exists, use the default
 	if (current_input_mode == -1 && variable_global_exists("default_input_mode")) {
@@ -66,7 +67,7 @@ function input_check(input_to_check, current_input_mode = -1){
 	if (current_input_mode == INPUT_MODE.ANY) {
 		var check_status = false;
 		for (var i = 0; i < array_length(input_map[input_to_check]); i++) {
-			if (keyboard_check(input_map[input_to_check][i])) {
+			if ((keyboard_check(input_map[input_to_check][i]) && !pressed)||(keyboard_check_pressed(input_map[input_to_check][i] && pressed))) {
 				check_status = true;
 			}
 		}
@@ -74,6 +75,9 @@ function input_check(input_to_check, current_input_mode = -1){
 	}
 	
 	// Default case where we just check the keyboard input given by the input_map
+	if pressed {
+		return keyboard_check_pressed(input_map[input_to_check][cim]);
+	}
 	return keyboard_check(input_map[input_to_check][cim]);
 }
 
@@ -83,9 +87,10 @@ function input_check(input_to_check, current_input_mode = -1){
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_up(current_input_mode = -1) {
-	return input_check(INPUTS.DIRECTION_UP, current_input_mode);
+function input_check_up(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.DIRECTION_UP, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the down input is held.
@@ -94,9 +99,10 @@ function input_check_up(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_down(current_input_mode = -1) {
-	return input_check(INPUTS.DIRECTION_DOWN, current_input_mode);
+function input_check_down(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.DIRECTION_DOWN, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the left input is held.
@@ -105,9 +111,10 @@ function input_check_down(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_left(current_input_mode = -1) {
-	return input_check(INPUTS.DIRECTION_LEFT, current_input_mode);
+function input_check_left(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.DIRECTION_LEFT, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the right input is held.
@@ -116,9 +123,10 @@ function input_check_left(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_right(current_input_mode = -1) {
-	return input_check(INPUTS.DIRECTION_RIGHT, current_input_mode);
+function input_check_right(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.DIRECTION_RIGHT, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the yes input is held.
@@ -127,9 +135,10 @@ function input_check_right(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_yes(current_input_mode = -1) {
-	return input_check(INPUTS.BUTTON_YES, current_input_mode);
+function input_check_yes(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.BUTTON_YES, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the no input is held.
@@ -138,9 +147,10 @@ function input_check_yes(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_no(current_input_mode = -1) {
-	return input_check(INPUTS.BUTTON_NO, current_input_mode);
+function input_check_no(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.BUTTON_NO, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the left bumper input is held.
@@ -149,9 +159,10 @@ function input_check_no(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_bumper_left(current_input_mode = -1) {
-	return input_check(INPUTS.BUMPER_LEFT, current_input_mode);
+function input_check_bumper_left(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.BUMPER_LEFT, current_input_mode, pressed);
 }
 
 /// @desc Returns a boolean representing if the right bumper input is held.
@@ -160,7 +171,8 @@ function input_check_bumper_left(current_input_mode = -1) {
 ///                                    1 is WASD.
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
+/// @param {bool} [pressed] Pass true if the function should only check for presses this frame. Defaults to false.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_bumper_right(current_input_mode = -1) {
-	return input_check(INPUTS.BUMPER_RIGHT, current_input_mode);
+function input_check_bumper_right(current_input_mode = -1, pressed = false) {
+	return input_check(INPUTS.BUMPER_RIGHT, current_input_mode, pressed);
 }

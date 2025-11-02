@@ -34,6 +34,8 @@
         "\"right\"",
         "\"affirmative\"",
         "\"negative\"",
+        "\"bumper left\"",
+        "\"bumper right\"",
       ],"multiselect":false,"name":"str_button_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"left\"","varType":6,},
   ],
   "resourceType":"GMObject",

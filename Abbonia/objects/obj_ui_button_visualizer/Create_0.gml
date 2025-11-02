@@ -32,5 +32,13 @@ function update_sprite_index() {
 			sprite_index = spr_ui_button_face_b;
 			int_button = INPUTS.BUTTON_NO;
 			break;
+		case "bumper left":
+			sprite_index = spr_ui_bumper_left
+			int_button = INPUTS.BUMPER_LEFT;
+			break;
+		case "bumper right":
+			sprite_index = spr_ui_bumper_right;
+			int_button = INPUTS.BUMPER_RIGHT;
+			break;
 	}
 }

@@ -4,7 +4,9 @@ enum INPUTS {
 	DIRECTION_LEFT,
 	DIRECTION_RIGHT,
 	BUTTON_YES,
-	BUTTON_NO
+	BUTTON_NO,
+	BUMPER_LEFT,
+	BUMPER_RIGHT
 }
 
 enum INPUT_MODE {
@@ -22,6 +24,8 @@ enum INPUT_MODE {
 ///                              3 is DIRECTION_RIGHT.
 ///                              4 is BUTTON_YES.
 ///                              5 is BUTTON_NO.
+///                              6 is BUMPER_LEFT.
+///                              7 is BUMPER_RIGHT.
 /// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
 ///                                    0 is ARROW_KEYS.
 ///                                    1 is WASD.
@@ -53,7 +57,9 @@ function input_check(input_to_check, current_input_mode = -1){
 		[vk_left, ord("A"), -1], // DIRECTION_LEFT
 		[vk_right, ord("D"), -1], // DIRECTION_RIGHT
 		[ord("Z"), ord("J"), -1], // BUTTON_YES
-		[ord("X"), ord("K"), -1] // BUTTON_NO
+		[ord("X"), ord("K"), -1], // BUTTON_NO
+		[ord("C"), ord("L"), -1], // BUMPER_LEFT
+		[ord("V"), ord(";"), -1] // BUMPER_RIGHT
 	]
 	
 	// special case for INPUT_MODE.ANY where we have to check all the other input mode options
@@ -78,7 +84,7 @@ function input_check(input_to_check, current_input_mode = -1){
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_up(current_input_mode = INPUT_MODE.ANY) {
+function input_check_up(current_input_mode = -1) {
 	return input_check(INPUTS.DIRECTION_UP, current_input_mode);
 }
 
@@ -89,7 +95,7 @@ function input_check_up(current_input_mode = INPUT_MODE.ANY) {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_down(current_input_mode = INPUT_MODE.ANY) {
+function input_check_down(current_input_mode = -1) {
 	return input_check(INPUTS.DIRECTION_DOWN, current_input_mode);
 }
 
@@ -100,7 +106,7 @@ function input_check_down(current_input_mode = INPUT_MODE.ANY) {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_left(current_input_mode = INPUT_MODE.ANY) {
+function input_check_left(current_input_mode = -1) {
 	return input_check(INPUTS.DIRECTION_LEFT, current_input_mode);
 }
 
@@ -111,7 +117,7 @@ function input_check_left(current_input_mode = INPUT_MODE.ANY) {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_right(current_input_mode = INPUT_MODE.ANY) {
+function input_check_right(current_input_mode = -1) {
 	return input_check(INPUTS.DIRECTION_RIGHT, current_input_mode);
 }
 
@@ -122,7 +128,7 @@ function input_check_right(current_input_mode = INPUT_MODE.ANY) {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_yes(current_input_mode = INPUT_MODE.ANY) {
+function input_check_yes(current_input_mode = -1) {
 	return input_check(INPUTS.BUTTON_YES, current_input_mode);
 }
 
@@ -133,6 +139,28 @@ function input_check_yes(current_input_mode = INPUT_MODE.ANY) {
 ///                                    2 is CUSTOM.
 ///                                    3 is ANY.
 /// @return {bool} True if the input is held, false otherwise.
-function input_check_no(current_input_mode = INPUT_MODE.ANY) {
+function input_check_no(current_input_mode = -1) {
 	return input_check(INPUTS.BUTTON_NO, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the left bumper input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_bumper_left(current_input_mode = -1) {
+	return input_check(INPUTS.BUMPER_LEFT, current_input_mode);
+}
+
+/// @desc Returns a boolean representing if the right bumper input is held.
+/// @param {real} [current_input_mode] Determines what check is used to determine if they input is pressed.
+///                                    0 is ARROW_KEYS.
+///                                    1 is WASD.
+///                                    2 is CUSTOM.
+///                                    3 is ANY.
+/// @return {bool} True if the input is held, false otherwise.
+function input_check_bumper_right(current_input_mode = -1) {
+	return input_check(INPUTS.BUMPER_RIGHT, current_input_mode);
 }

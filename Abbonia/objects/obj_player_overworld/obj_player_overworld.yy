@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_temp",
-    "path":"sprites/spr_player_temp/spr_player_temp.yy",
+    "name":"spr_player_overworld_helena",
+    "path":"sprites/spr_player_overworld_helena/spr_player_overworld_helena.yy",
   },
   "spriteMaskId":null,
   "visible":true,

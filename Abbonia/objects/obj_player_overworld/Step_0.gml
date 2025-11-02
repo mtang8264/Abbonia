@@ -19,11 +19,11 @@ if (input_check_down_not_up())
 	move_and_collide(0, float_walk_speed, obj_player_overworld,4,0,0,-1,-1);
 }
 
-if (input_check_bumper_left()) {
+if (input_check_bumper_left(,true)) {
 	if (int_current_character == 0) { int_current_character = 5; }
 	else { int_current_character --; }
 }
-if (input_check_bumper_right()) {
+if (input_check_bumper_right(,true)) {
 	if (int_current_character == 5) { int_current_character = 0; }
 	else { int_current_character ++; }
 }
